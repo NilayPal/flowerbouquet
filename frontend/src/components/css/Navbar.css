@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-wrapper {
+  font-family: 'Segoe UI', sans-serif;
+  color: #2c2c2c;
+}
+
+/* Flex container for top navbar */
+.top-navbar {
+  background-color: #111;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Left-aligned logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: gold;
+}
+
+/* Centered location */
+.location {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Right-aligned icons */
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icons button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icons button:hover {
+  transform: scale(1.1);
+}
+
+/* Bottom menu */
+.bottom-menu {
+  background-color: #fff;
+  border: 1px solid #e6d4ab;
+  border-radius: 10px;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px 20px;
+  gap: 15px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  text-align: center;
+  color: #2c2c2c;
+}
+
+.menu-icon {
+  font-size: 22
+}
