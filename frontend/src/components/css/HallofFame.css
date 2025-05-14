@@ -1,0 +1,54 @@
+.hall-of-fame {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdf6f0;
+  min-height: 100vh;
+}
+
+.hall-of-fame h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #b3565a;
+}
+
+.hof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hof-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hof-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.hof-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.hof-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.hof-card p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #777;
+}

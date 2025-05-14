@@ -1,18 +1,19 @@
 import React from "react";
 import "./css/Navbar.css";
 import { FaTruck, FaBirthdayCake, FaGift, FaSeedling } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+       const navigate = useNavigate();
   return (
     
     <div className="navbar-wrapper">
       <div className="top-navbar">
         <div className="logo">Interflora</div>
-        {/* <div className="location">🇮🇳 Where to deliver?</div> */}
         <div className="icons">
-          {/* <button>₹</button> */}
           <button>♥</button>
-          <button>🛒</button>
+          <button onClick={() => navigate("/cart")}>🛒</button>
           <button>👤</button>
         </div>
       </div>

@@ -1,0 +1,65 @@
+.about-company {
+  padding: 50px 20px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fdf9f5;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.about-company h1 {
+  font-size: 36px;
+  color: #b3565a;
+  margin-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.founder-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.company-card h2 {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.company-card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+.card:hover {
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+.card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease-in-out; /* add this line */
+}
+
