@@ -3,6 +3,8 @@ import '../css/Slider.css';
 import Collection from './Collection';
 import HallofFame from './HallofFame';
 import About from './About';
+import Footer from './Footer';
+import Review from './Review'
 
 const images = [
  'https://plus.unsplash.com/premium_photo-1674986175088-2d7dda41f7f8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGZsb3dlcnN8ZW58MHx8MHx8fDA%3D',
@@ -40,6 +42,8 @@ const ImageSlider = () => {
     <Collection/>
     <HallofFame/>
     <About/>
+    <Review/>
+    {/* <Footer/>  */}
     </>
   );
 };

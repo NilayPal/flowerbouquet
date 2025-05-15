@@ -1,0 +1,39 @@
+.terms-container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  line-height: 1.7;
+}
+
+.terms-container h1 {
+  font-size: 2.5rem;
+  color: #d63384;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.terms-container h2 {
+  font-size: 1.4rem;
+  margin-top: 24px;
+  color: #444;
+}
+
+.terms-container p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.terms-container a {
+  color: #d63384;
+  text-decoration: none;
+}
+
+.terms-container a:hover {
+  text-decoration: underline;
+}
+

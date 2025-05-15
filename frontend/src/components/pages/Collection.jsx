@@ -1,26 +1,34 @@
 import React from 'react';
-import '../css/Collection.css';
+import { Link, useNavigate } from 'react-router-dom';
 import flowerData from '../data/FlowerData';
-import { Link } from 'react-router-dom';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { useWishlist } from '../pages/WatchListContext';
+import '../css/Collection.css';
 
-// Individual Flower Card Component
-const FlowerCard = ({ id, name, price, rating, flowerImage }) => {
+const FlowerCard = ({ flower }) => {
+  const navigate= useNavigate();
+  const { wishlist, toggleWishlist } = useWishlist();
+  const isWishlisted = wishlist.some(item => item.id === flower.id);
+
+
+   
+
   return (
     <div className="flower-card">
-      <img src={flowerImage} alt="Flower Bouquet" className="flower-image" />
+      <div className="wishlist-icon" onClick={() => toggleWishlist(flower)}>
+        {isWishlisted ? <FaHeart color="#d63384" /> : <FaRegHeart color="#aaa" />}
+      </div>
+      <img src={flower.flowerImage} alt={flower.name} className="flower-image" />
       <div className="flower-info">
-        <div><strong>Name:</strong> {name}</div>
-        <div><strong>Price:</strong> ₹{price}</div>
-        <div><strong>Rating:</strong> {rating} ★</div><br />
-        <div>
-          <Link to={`/order/${id}`}><button>Buy Now</button></Link>
-        </div>
+        <div><strong>Name:</strong> {flower.name}</div>
+        <div><strong>Price:</strong> ₹{flower.price}</div>
+        <div><strong>Rating:</strong> {flower.rating} ★</div><br />
+        <Link to={`/order/${flower.id}`}><button>Buy Now</button></Link>
       </div>
     </div>
   );
 };
 
-// Flower Collection Component
 const FlowerCollection = () => {
   return (
     <>
@@ -28,17 +36,9 @@ const FlowerCollection = () => {
         <h1>Our Collection</h1>
         <p>No matter the occasion, express your love with fresh blooms</p>
       </div>
-
       <div className="flower-collection">
         {flowerData.map(flower => (
-          <FlowerCard
-            key={flower.id}
-            id={flower.id}
-            name={flower.name}
-            price={flower.price}
-            rating={flower.rating}
-            flowerImage={flower.flowerImage}
-          />
+          <FlowerCard key={flower.id} flower={flower} />
         ))}
       </div>
     </>

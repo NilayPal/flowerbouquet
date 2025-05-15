@@ -25,6 +25,11 @@ const OrderPage = () => {
     if (quantity > 1) setQuantity((prev) => prev - 1);
   };
 
+   const handleCheckout = () => {
+  navigate("/checkout", { state: { flower: item, quantity } });
+};
+
+
   return (
     <div className="order-page">
       <div className="order-card">
@@ -58,7 +63,7 @@ const OrderPage = () => {
 
           <div className="button-group">
             <button onClick={handleAddToCart}>Add to Cart</button>
-            <button>Checkout</button>
+            <button onClick={handleCheckout}>Checkout</button>
           </div>
         </div>
       </div>

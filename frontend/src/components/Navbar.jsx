@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="top-navbar">
         <div className="logo">Interflora</div>
         <div className="icons">
-          <button>♥</button>
+          <button onClick={()=>navigate('/wachlist')}>♥</button>
           <button onClick={() => navigate("/cart")}>🛒</button>
           <button>👤</button>
         </div>

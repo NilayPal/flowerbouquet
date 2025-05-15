@@ -1,0 +1,32 @@
+.about-us {
+  background-color: #fff0f5;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h2 {
+  font-size: 2rem;
+  color: #c2185b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.about-container strong {
+  color: #c2185b;
+}
